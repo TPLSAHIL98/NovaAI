@@ -1,1 +1,10 @@
-
+{
+  "required": true,
+  "package": "com.sahil.novaai.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
