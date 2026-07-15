@@ -1,1 +1,29 @@
-
+{
+  "schemaVersion": 1,
+  "id": "novaai",
+  "version": "${version}",
+  "name": "NovaAI",
+  "description": "A Steve-like AI companion for Minecraft Fabric 1.21.1.",
+  "authors": [
+    "Sahil"
+  ],
+  "contact": {
+    "sources": "https://github.com/TPLSAHIL98/NovaAI"
+  },
+  "license": "All Rights Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.sahil.novaai.NovaAI"
+    ]
+  },
+  "mixins": [
+    "novaai.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.5",
+    "minecraft": "1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
