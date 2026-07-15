@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.16'
+    id 'fabric-loom' version '1.8-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -11,6 +11,9 @@ base {
 }
 
 repositories {
+    maven {
+        url = "https://maven.fabricmc.net/"
+    }
     mavenCentral()
 }
 
@@ -31,14 +34,14 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    options.release = 21
-    options.encoding = "UTF-8"
+    it.options.release = 21
 }
 
 java {
+    withSourcesJar()
+
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
-    withSourcesJar()
 }
 
 jar {
@@ -56,6 +59,5 @@ publishing {
     }
 
     repositories {
-        // Add publishing repositories here if needed
     }
 }
